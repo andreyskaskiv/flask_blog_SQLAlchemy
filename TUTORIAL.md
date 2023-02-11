@@ -42,7 +42,11 @@ with app.app_context():
 
 ![04_auth_account.png](_tutorial_img%2F04_auth_account.png)
 
+---
 
+## 5. Account Page
+
+![05_profile_user.png](_tutorial_img%2F05_profile_user.png)
 
 -------------------------------
 ---
