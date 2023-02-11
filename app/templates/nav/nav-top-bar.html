@@ -44,8 +44,8 @@
                 {#                    </li>#}
                 {#                {% endif %}#}
 
-                    <li><a href="/register"><span id="sign_up_menu_icon_color" class="glyphicon glyphicon-user"></span> Register</a></li>
-                    <li><a href="/login"><span id="login_menu_icon_color" class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="{{ url_for('auth.register') }}"><span id="sign_up_menu_icon_color" class="glyphicon glyphicon-user"></span> Register</a></li>
+                    <li><a href="{{ url_for('auth.login') }}"><span id="login_menu_icon_color" class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
             </ul>
 
