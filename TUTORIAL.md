@@ -9,12 +9,43 @@
 ## 2. Forms and User Input
 ![02_added_form.png](_tutorial_img%2F02_added_form.png)
 
+![02_tree_project.png](_tutorial_img%2F02_tree_project.png)
+
 ##### added:
 * forms.py
 * 
 * login.html
 * register.html
 * messages.html
+
+
+---
+
+## 3. Database create, SQLAlchemy
+
+```
+from web import create_app
+app = create_app()
+from app import db
+from app.auth.models import User, Post
+with app.app_context():
+    db.create_all()
+
+```
+
+![03_db.png](_tutorial_img%2F03_db.png)
+
+
+---
+
+## 4. Login - Auth
+
+![04_auth_account.png](_tutorial_img%2F04_auth_account.png)
+
+
+
+-------------------------------
+---
 
 #### **Notes:**
 
@@ -29,4 +60,11 @@
 -  
 ##### Bootstrap container:
 - https://getbootstrap.ru/docs/v4-alpha/layout/grid/
+-  
+##### atabase SQLAlchemy:
+- https://testdriven.io/courses/flask-celery/app-factory/
+- https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy#step-5-adding-flask-sqlalchemy-models-to-your-flask-application
+- https://flask-sqlalchemy.palletsprojects.com/en/2.x/contexts/
+- https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/
+- https://stackoverflow.com/questions/34122949/working-outside-of-application-context-flask
 ---
