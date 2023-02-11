@@ -23,19 +23,24 @@
 
 ## 3. Database create, SQLAlchemy
 
-* from web import create_app
-* app = create_app()
-* from app import db
-* from app.auth.models import User, Post
-* with app.app_context():
-*    db.create_all()
+```
+from web import create_app
+app = create_app()
+from app import db
+from app.auth.models import User, Post
+with app.app_context():
+    db.create_all()
+
+```
 
 ![03_db.png](_tutorial_img%2F03_db.png)
 
 
 ---
 
-## 4. 
+## 4. Login - Auth
+
+![04_auth_account.png](_tutorial_img%2F04_auth_account.png)
 
 
 
