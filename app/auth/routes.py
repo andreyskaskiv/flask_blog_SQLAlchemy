@@ -1,11 +1,11 @@
-from flask import render_template, redirect, flash, url_for, request
+from flask import render_template, redirect, flash, url_for, request, abort
 from flask_login import current_user, login_user, login_required, logout_user
 
 import app
 from app import db
 from app.auth import auth
 from app.auth.forms import LoginForm, RegistrationForm, UpdateAccountForm
-from app.auth.models import User
+from app.auth.models import User, Post
 from app.auth.utils import save_picture
 
 
@@ -80,7 +80,6 @@ def account():
                            title='Account',
                            image_file=image_file,
                            form=form)
-
 
 
 

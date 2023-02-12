@@ -48,6 +48,19 @@ with app.app_context():
 
 ![05_profile_user.png](_tutorial_img%2F05_profile_user.png)
 
+
+---
+
+## 6. Post
+
+![06_added_post.png](_tutorial_img%2F06_added_post.png)
+
+
+
+
+
+
+
 -------------------------------
 ---
 
