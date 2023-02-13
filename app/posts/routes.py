@@ -1,7 +1,7 @@
 from flask import render_template, redirect, flash, url_for, request, abort
 from flask_login import current_user, login_required
 
-from app.auth.models import Post
+from app.auth.models import Post, User
 from app import db
 from app.posts import posts
 
@@ -67,3 +67,11 @@ def delete_post(post_id):
     flash('Your posts has been deleted!', 'success')
     return redirect(url_for('main.index'))
 
+@posts.route("/user/<string:username>")
+def user_posts(username):
+    page = request.args.get('page', 1, type=int)
+    user = User.query.filter_by(username=username).first_or_404()
+    posts = Post.query.filter_by(author=user)\
+        .order_by(Post.date_posted.desc())\
+        .paginate(page=page, per_page=5)
+    return render_template('posts/user_posts.html', posts=posts, user=user)

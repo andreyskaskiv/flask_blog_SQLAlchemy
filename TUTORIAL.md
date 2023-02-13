@@ -55,10 +55,11 @@ with app.app_context():
 
 ![06_added_post.png](_tutorial_img%2F06_added_post.png)
 
+## 7. Paginate
 
+![07_page.png](_tutorial_img%2F07_page.png)
 
-
-
+![07_page_tree.png](_tutorial_img%2F07_page_tree.png)
 
 
 -------------------------------
