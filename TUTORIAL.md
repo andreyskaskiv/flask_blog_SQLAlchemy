@@ -1,7 +1,7 @@
 # **My Tutorial:**
 
 ---
-
+[helicopter-upside-down.mp4](_tutorial_img%2Fhelicopter-upside-down.mp4)
 ## 1. Templates
 ![01_templates.png](_tutorial_img%2F01_templates.png)
 
@@ -55,11 +55,25 @@ with app.app_context():
 
 ![06_added_post.png](_tutorial_img%2F06_added_post.png)
 
+---
+
 ## 7. Paginate
 
 ![07_page.png](_tutorial_img%2F07_page.png)
 
 ![07_page_tree.png](_tutorial_img%2F07_page_tree.png)
+
+
+---
+
+## 8. Password-Reset-Email
+
+![8_Password_Reset_Email.png](_tutorial_img%2F8_Password_Reset_Email.png)
+
+https://stackoverflow.com/questions/61602885/smtplib-smtpsenderrefused-530-b5-7-0-authentication-required-learn-more-at
+
+
+
 
 
 -------------------------------

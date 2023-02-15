@@ -75,3 +75,33 @@ class UpdateAccountForm(FlaskForm):
             user = User.query.filter_by(email=email.data).first()
             if user:
                 raise ValidationError('That email is taken. Please choose a different one.')
+
+
+class RequestResetForm(FlaskForm):
+    email = StringField("Email: ",
+                        validators=[DataRequired(),
+                                    Length(10, 100),
+                                    Email()],
+                        render_kw={'placeholder': 'Enter email'})
+
+    submit = SubmitField("Request Password Reset",
+                         render_kw={'class': 'btn btn-success'})
+
+    def validate_email(self, email):
+        user = User.query.filter_by(email=email.data).first()
+        if user is None:
+            raise ValidationError('There is no account with that email. You must register first.')
+
+
+class ResetPasswordForm(FlaskForm):
+    password = PasswordField('Password',
+                             validators=[DataRequired(), EqualTo('password_repeat', message='Passwords must match')],
+                             render_kw={'placeholder': 'Enter password'})
+
+    password_repeat = PasswordField('Confirm password',
+                                    validators=[DataRequired()],
+                                    render_kw={'placeholder': 'Repeat password'})
+
+    submit = SubmitField('Reset Password',
+                         render_kw={'class': 'btn btn-success'})
+
